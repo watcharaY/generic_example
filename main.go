@@ -13,3 +13,12 @@ func SumGeneric[T Number](numbers []T) T {
 	}
 	return result
 }
+
+// same way as declare below
+func SumGeneric2[T int | int32 | int64 | float32 | float64](numbers []T) T {
+	var result T
+	for _, e := range numbers {
+		result += e
+	}
+	return result
+}
